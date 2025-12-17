@@ -5,3 +5,14 @@
 
 // Enhance TypeScript's built-in typings.
 import '@total-typescript/ts-reset';
+
+declare global {
+  interface Window {
+    ENV?: {
+      SUPABASE_URL?: string;
+      SUPABASE_ANON_KEY?: string;
+    };
+  }
+}
+
+export {};

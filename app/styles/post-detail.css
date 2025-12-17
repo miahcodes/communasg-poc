@@ -1,0 +1,458 @@
+/* Post Detail Page Styles */
+.post-detail-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+  padding: 0.5rem 0;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.breadcrumb a {
+  color: #6b7280;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  color: #10b981;
+}
+
+/* User Header */
+.post-user-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem 0;
+  padding: 1rem 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+.user-location {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin: 0.125rem 0 0;
+}
+
+.follow-button {
+  padding: 0.5rem 1.5rem;
+  background: #10b981;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.follow-button:hover {
+  background: #059669;
+}
+
+/* Post Title & Description */
+.post-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 1rem 0 0.5rem;
+}
+
+.post-description {
+  font-size: 1rem;
+  color: #4b5563;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* Post Metadata */
+.post-metadata {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.metadata-item {
+  padding: 0.25rem 0.75rem;
+  background: #f3f4f6;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.tag {
+  padding: 0.25rem 0.75rem;
+  background: #e0f2fe;
+  color: #0369a1;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+}
+
+/* Interactive Image Container */
+.interactive-image-container {
+  position: relative;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.main-image {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+/* Hotspot Markers */
+.hotspot-marker {
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  transform: translate(-50%, -50%);
+  background: rgba(16, 185, 129, 0.9);
+  border: 2px solid white;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hotspot-marker:hover,
+.hotspot-marker.active {
+  transform: translate(-50%, -50%) scale(1.1);
+  background: #10b981;
+}
+
+.hotspot-plus {
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.hotspot-pulse {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px solid #10b981;
+  transform: translate(-50%, -50%);
+  animation: pulse 2s infinite;
+  pointer-events: none;
+}
+
+@keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.5);
+    opacity: 0;
+  }
+}
+
+/* Product Card Popup */
+.product-card-popup {
+  position: absolute;
+  background: white;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  min-width: 200px;
+  transform: translateY(-50%);
+}
+
+.product-card-popup .close-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  width: 24px;
+  height: 24px;
+  border: none;
+  background: #f3f4f6;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.25rem;
+  line-height: 1;
+  color: #6b7280;
+}
+
+.product-card-popup .product-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 0.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.product-card-popup h4 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 0.5rem;
+}
+
+.product-card-popup .product-price {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #10b981;
+  margin: 0 0 0.75rem;
+}
+
+.view-product-btn {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  background: #10b981;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 0.25rem;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.view-product-btn:hover {
+  background: #059669;
+}
+
+/* Image Thumbnails */
+.image-thumbnails {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding: 0.5rem 0;
+  margin-bottom: 1.5rem;
+}
+
+.thumbnail {
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+  border: 2px solid transparent;
+  border-radius: 0.25rem;
+  overflow: hidden;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.thumbnail.active,
+.thumbnail:hover {
+  border-color: #10b981;
+}
+
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Post Actions */
+.post-actions {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-top: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e5e7eb;
+  margin: 1.5rem 0;
+}
+
+.action-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 0.875rem;
+  color: #4b5563;
+}
+
+.action-btn:hover {
+  background: #f9fafb;
+  border-color: #10b981;
+  color: #111827;
+}
+
+.action-btn .icon {
+  font-size: 1.125rem;
+}
+
+/* Comments Section */
+.comments-section {
+  margin: 2rem 0;
+}
+
+.comments-section h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.comment-form {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.comment-input {
+  flex: 1;
+  padding: 0.75rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.comment-input:focus {
+  outline: none;
+  border-color: #10b981;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+
+.comment-submit {
+  padding: 0.75rem 1.5rem;
+  background: #10b981;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.comment-submit:hover {
+  background: #059669;
+}
+
+/* Related Posts */
+.related-posts {
+  margin: 3rem 0;
+}
+
+.related-posts h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.related-posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.related-post-card {
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.2s;
+}
+
+.related-post-card:hover {
+  opacity: 0.9;
+}
+
+.related-post-image {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.related-post-card h4 {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #111827;
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.related-post-stats {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .post-detail-page {
+    padding: 0;
+  }
+
+  .breadcrumb,
+  .post-user-header,
+  .post-title,
+  .post-description,
+  .post-metadata {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .interactive-image-container {
+    margin-left: -1rem;
+    margin-right: -1rem;
+    width: calc(100% + 2rem);
+  }
+
+  .main-image {
+    border-radius: 0;
+  }
+
+  .post-actions {
+    position: sticky;
+    bottom: 0;
+    background: white;
+    z-index: 10;
+    margin: 0;
+    padding: 0.75rem 1rem;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+  }
+
+  .product-card-popup {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: none;
+    border-radius: 1rem 1rem 0 0;
+    padding: 1.5rem;
+    max-height: 50vh;
+    overflow-y: auto;
+  }
+}

@@ -1,0 +1,184 @@
+/* Main Navigation Styles */
+.main-nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+  height: 60px;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  padding: 0 1rem;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* Logo */
+.nav-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo-text {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #10b981;
+  letter-spacing: -0.025em;
+}
+
+/* Desktop Search */
+.nav-search-desktop {
+  display: none;
+  flex: 1;
+  max-width: 600px;
+  margin: 0 2rem;
+}
+
+.search-form {
+  position: relative;
+  width: 100%;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.5rem 2.5rem 0.5rem 1rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  background: #f9fafb;
+  transition: all 0.2s;
+}
+
+.search-input:focus {
+  outline: none;
+  background: white;
+  border-color: #10b981;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+
+.search-button {
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0.25rem;
+  background: none;
+  border: none;
+  color: #6b7280;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.search-button:hover {
+  color: #10b981;
+}
+
+/* Nav Actions */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-action,
+.nav-action-mobile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  color: #6b7280;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.nav-action:hover,
+.nav-action-mobile:hover {
+  color: #10b981;
+}
+
+.nav-action-mobile {
+  display: block;
+}
+
+/* Mobile Search Overlay */
+.mobile-search-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: white;
+  z-index: 100;
+  animation: slideDown 0.2s ease;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.mobile-search-header {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.mobile-search-back {
+  padding: 0.5rem;
+  background: none;
+  border: none;
+  color: #6b7280;
+  cursor: pointer;
+}
+
+.mobile-search-form {
+  flex: 1;
+  margin-left: 0.5rem;
+}
+
+.mobile-search-input {
+  width: 100%;
+  padding: 0.5rem;
+  border: none;
+  font-size: 1rem;
+  background: transparent;
+}
+
+.mobile-search-input:focus {
+  outline: none;
+}
+
+/* Desktop Styles */
+@media (min-width: 768px) {
+  .nav-search-desktop {
+    display: block;
+  }
+
+  .nav-action-mobile {
+    display: none;
+  }
+
+  .nav-container {
+    padding: 0 2rem;
+  }
+}
+
+/* Large Desktop */
+@media (min-width: 1280px) {
+  .nav-container {
+    padding: 0 3rem;
+  }
+}

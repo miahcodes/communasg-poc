@@ -15,7 +15,12 @@ import favicon from '~/assets/favicon.svg';
 import {FOOTER_QUERY, HEADER_QUERY} from '~/lib/fragments';
 import resetStyles from '~/styles/reset.css?url';
 import appStyles from '~/styles/app.css?url';
+import postsStyles from '~/styles/posts.css?url';
+import navigationStyles from '~/styles/navigation.css?url';
+import postDetailStyles from '~/styles/post-detail.css?url';
+import layoutStyles from '~/styles/layout.css?url';
 import {PageLayout} from './components/PageLayout';
+import {MainNav} from '~/components/layout/MainNav';
 
 export type RootLoader = typeof loader;
 
@@ -151,6 +156,10 @@ export function Layout({children}: {children?: React.ReactNode}) {
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <link rel="stylesheet" href={resetStyles}></link>
         <link rel="stylesheet" href={appStyles}></link>
+        <link rel="stylesheet" href={postsStyles}></link>
+        <link rel="stylesheet" href={navigationStyles}></link>
+        <link rel="stylesheet" href={postDetailStyles}></link>
+        <link rel="stylesheet" href={layoutStyles}></link>
         <Meta />
         <Links />
       </head>
